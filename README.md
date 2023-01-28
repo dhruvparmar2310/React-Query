@@ -2,7 +2,7 @@
 Hello Guys, I am **Dhruv Parmar**. Let's learn React Query together. If you like my content than plese give a **star** to this repository and also share with your friends.
 
 ## What is React Query ?
-React query is a very efficient query caching client for the front-end which can replace traditional methods of fetching data on the mounting stage of the component and global state management like Redux in some use cases. React Query is also known as **missing data-fetching library** for React. React Query does the data **fetching, caching, synchroning** and **updating server state** in React.
+React query is a very efficient query caching client for the front-end which can replace traditional methods of fetching data on the mounting stage of the component and global state management like Redux in some use cases. React Query is also known as **missing data-fetching library** for React. React Query does the data **fetching, caching, synchroning** and **updating server state** in React. React Query is the best library to manage **server state** data.
 
 I recommend you all to read the official [docs](https://tanstack.com/query/v4/docs/react/overview) of React Query.
 
