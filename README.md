@@ -24,7 +24,7 @@ No, we cannot replace React Query and context api with Redux, because they are n
 React Query stores the cached data **in memory**. If you wanna store some additionally sync data somewhere else, than watch this [plugin](https://tanstack.com/query/latest/docs/react/plugins/persistQueryClient?from=reactQueryV3&original=https%3A%2F%2Freact-query-v3.tanstack.com%2Fplugins%2FpersistQueryClient).
 
 ## Overview:
-In overview, you will learn what is **Server State**, what are the issues after knowing Server State, pros and cons of React Query, etc.
+In overview, you will learn what is **Server State**, what are the issues after knowing Server State, how to install it, etc.
 
 ### What is Server State ?
 In order to know what is Server State, you must know the basics knownledge of Server States. In Server side state management, all the information or data is stored **in memory**. Server side state management is **more secure** than Client side state management. Where-else in client side state management, the data or information will be stored directly on **client-side**. This information can be from **cookies, query string,** etc.
@@ -44,10 +44,18 @@ After knowning what is server states, there are some challenges which will occur
 - to **memorize the query result** in structured sharing.
 - to manage memory & garbage collection(**automatically free up memory space that has been allocated to objects no longer needed by the program**) of server state data.
 
+***installation***:
+
+```javascript
+npm i @tanstack/react-query
+```
+
+> *for more details, please refer the [official docs](https://tanstack.com/query/v4/docs/react/installation) of React Query.*
+
 ## Get Started:
 There are mainly three core concepts in React Query:
 - [Queries](https://tanstack.com/query/v4/docs/react/guides/queries)
-- Muatations
+- [Muatations](https://tanstack.com/query/v4/docs/react/guides/mutations)
 - Query Invalidation
 
 ### 1. Queries:
