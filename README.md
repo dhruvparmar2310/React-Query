@@ -29,6 +29,21 @@ In overview, you will learn what is **Server State**, what are the issues after 
 ### What is Server State ?
 In order to know what is Server State, you must know the basics knownledge of Server States. In Server side state management, all the information or data is stored **in memory**. Server side state management is **more secure** than Client side state management. Where-else in client side state management, the data or information will be stored directly on **client-side**. This information can be from **cookies, query string,** etc.
 
+Server states are totally different from client state. Initially, you must be aware of few things related to Server states:
+- It requires asynchronous Api for fetching and updating Api calls.
+- It can be changed by other peoples without our knowledge.
+- It can become "out of date" in your application, if you don't take a proper care of it.
+
+After knowning what is server states, there are some challenges which will occurs/arise as you move further:
+- Caching: the most difficult challenging part in programming.
+- Deduping(**process of removing same data from two or more datasets.**) multiple requests for the same data into a single request.
+- updating "out of date" data in **background**.
+- to know **when** the data is "out of date".
+- to reflect updated data **as quick as** possible on the screen.
+- performance optimization such as **pagination** and **lazy loading** data.
+- to **memorize the query result** in structured sharing.
+- to manage memory & garbage collection(**automatically free up memory space that has been allocated to objects no longer needed by the program**) of server state data.
+
 ## Get Started:
 There are mainly three core concepts in React Query:
 - [Queries](https://tanstack.com/query/v4/docs/react/guides/queries)
