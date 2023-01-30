@@ -54,3 +54,31 @@ The **unique key** is used for refetching, caching, and sharing your queries wit
 The query mostly depends on two states:
 - `data`: If the query is in `success` state, than the data is available through `data` property.
 - `error`: If the query is in `isError` state, than the errors are available through `error` property.
+
+> *You can see something like this example in react query*
+
+```javascript
+function Todos() {
+  const { isLoading, isError, data, error } = useQuery({
+    queryKey: ['todos'],
+    queryFn: fetchTodoList,
+  })
+
+  if (isLoading) {
+    return <span>Loading...</span>
+  }
+
+  if (isError) {
+    return <span>Error: {error.message}</span>
+  }
+
+  // We can assume by this point that `isSuccess === true`
+  return (
+    <ul>
+      {data.map((todo) => (
+        <li key={todo.id}>{todo.title}</li>
+      ))}
+    </ul>
+  )
+}
+```
