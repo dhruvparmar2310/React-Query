@@ -28,3 +28,6 @@ There are mainly three core concepts in React Query:
 - [Queries](https://tanstack.com/query/v4/docs/react/guides/queries)
 - Muatations
 - Query Invalidation
+
+### 1. Queries:
+A query can be used with any Promise based method (**including GET and POST methods**) to fetch data from a server. If your method **modifies data** on the server, we recommend using **Mutations** instead.
