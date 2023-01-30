@@ -31,3 +31,26 @@ There are mainly three core concepts in React Query:
 
 ### 1. Queries:
 A query can be used with any Promise based method (**including GET and POST methods**) to fetch data from a server. If your method **modifies data** on the server, we recommend using **Mutations** instead.
+
+To subscribe queries in your components, `useQuery()` is used. It has two parameter's:
+- a unique key and
+- a function retuning promises.
+
+> *For example*
+
+```javascript
+import { useQuery } from '@tanstack/react-query'
+
+function App() {
+  const info = useQuery({ queryKey: ['todos'], queryFn: fetchTodoList })
+}
+```
+
+The **unique key** is used for refetching, caching, and sharing your queries with your application. A query can only be in one of the following states at any given moment:
+- `isLoading` or `status === loading`
+- `isError` or `status === error`
+- `isSuccess` or `status === success`
+
+The query mostly depends on two states:
+- `data`: If the query is in `success` state, than the data is available through `data` property.
+- `error`: If the query is in `isError` state, than the errors are available through `error` property.
