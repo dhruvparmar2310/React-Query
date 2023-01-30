@@ -92,3 +92,58 @@ In addition to `status` field, there is also one other object field importances 
 ## Why two status states required ?
 - `status` state gives an information about `data`, it tells weather the data is available or not ?
 - `fetchStatus` state gives an information about `queryFn`, it tells weather the `queryFn` is running or not.
+
+
+### 2. Mutations:
+Mutations are used to **create/update/delete data** or perform **server side modifications**. `useMutation()` hook is used for Mutations. It excepts one parameter, that is `mutationFn`:
+```javascript
+function App() {
+  const mutation = useMutation({
+    mutationFn: (newTodo) => {
+      return axios.post('/todos', newTodo)
+    },
+  })
+
+  return (
+    <div>
+      {mutation.isLoading ? (
+        'Adding todo...'
+      ) : (
+        <>
+          {mutation.isError ? (
+            <div>An error occurred: {mutation.error.message}</div>
+          ) : null}
+
+          {mutation.isSuccess ? <div>Todo added!</div> : null}
+
+          <button
+            onClick={() => {
+              mutation.mutate({ id: new Date(), title: 'Do Laundry' })
+            }}
+          >
+            Create Todo
+          </button>
+        </>
+      )}
+    </div>
+  )
+}
+```
+
+Here, you can see `mutate` accepts the variable or object. The mutate function is an **asynchronous function**, which means you cannot use it directly in an event callback in React 16 and earlier. If you wanna access the event in **onSubmit** you need to wrap mutate in another function. This is due to React **event pooling**.
+
+```javascript
+const CreateTodo = () => {
+  const mutation = useMutation({
+    mutationFn: (formData) => {
+      return fetch('/api', formData)
+    },
+  })
+  const onSubmit = (event) => {
+    event.preventDefault()
+    mutation.mutate(new FormData(event.target))
+  }
+
+  return <form onSubmit={onSubmit}>...</form>
+}
+```
