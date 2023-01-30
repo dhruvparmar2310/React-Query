@@ -22,3 +22,9 @@ No, we cannot replace React Query and context api with Redux, because they are n
 
 ## Where is React Query data stored like Redux ?
 React Query stores the cached data **in memory**. If you wanna store some additionally sync data somewhere else, than watch this [plugin](https://tanstack.com/query/latest/docs/react/plugins/persistQueryClient?from=reactQueryV3&original=https%3A%2F%2Freact-query-v3.tanstack.com%2Fplugins%2FpersistQueryClient).
+
+## Get Started:
+There are mainly three core concepts in React Query:
+- [Queries](https://tanstack.com/query/v4/docs/react/guides/queries)
+- Muatations
+- Query Invalidation
