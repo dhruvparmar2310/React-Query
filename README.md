@@ -82,3 +82,13 @@ function Todos() {
   )
 }
 ```
+
+In addition to `status` field, there is also one other object field importances (i.e.: `result`). Just like the `status` field, `fetchStatus` has the same situations.
+
+- `fetchStatus === fetching`
+- `fetchStatus === paused`
+- `fetchStatus === idle`
+
+## Why two status states required ?
+- `status` state gives an information about `data`, it tells weather the data is available or not ?
+- `fetchStatus` state gives an information about `queryFn`, it tells weather the `queryFn` is running or not.
