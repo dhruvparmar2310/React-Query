@@ -11,9 +11,9 @@ React Query gives us **caching of server data** out of the box with cache invali
 
 ## How do you handle errors in the React Query ?
 There are mainly three ways to handle the errors in the React Query :
-1) By using useQuery(): error property returned from useQuery().
-2) onError callback
-3) by using Error Boundaries
+- By using useQuery(): error property returned from useQuery().
+- onError callback
+- by using Error Boundaries
 
 > *Refer [this blog](https://tkdodo.eu/blog/react-query-error-handling) for better understanding.*
 
