@@ -18,7 +18,7 @@ There are mainly three ways to handle the errors in the React Query :
 > *Refer [this blog](https://tkdodo.eu/blog/react-query-error-handling) for better understanding.*
 
 ## Can we replace Redux with React Query ?
-No, we cannot replace React Query and context api with Redux, because they are on the same thing.
+No, we cannot replace React Query and context api with Redux, because they are not the same thing.
 
 ## Where is React Query data stored like Redux ?
 React Query stores the cached data **in memory**. If you wanna store some additionally sync data somewhere else, than watch this [plugin](https://tanstack.com/query/latest/docs/react/plugins/persistQueryClient?from=reactQueryV3&original=https%3A%2F%2Freact-query-v3.tanstack.com%2Fplugins%2FpersistQueryClient).
